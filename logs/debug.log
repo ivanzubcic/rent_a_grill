@@ -1,0 +1,277 @@
+(1.111) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.120) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+"GET / HTTP/1.1" 200 10765
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/jquery_pre.js HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/jquery_post.js HTTP/1.1" 304 0
+"GET /static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 304 0
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <module 'debug_toolbar.toolbar' from 'G:\\PYTHON~1\\envs\\RENT_A~1\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'registration.backends.simple.urls' from 'G:\\PYTHON~1\\envs\\RENT_A~1\\lib\\site-packages\\registration\\backends\\simple\\urls.py'> (None:None) ^accounts/>], [<RegexURLPattern login ^accounts/login/$>], [<RegexURLPattern logout ^accounts/logout/$>], [<RegexURLPattern None ^accounts/profile/>], [<RegexURLPattern None ^$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'debug_toolbar.toolbar' from 'G:\\\\PYTHON~1\\\\envs\\\\RENT_A~1\\\\lib\\\\site-packages\\\\debug_toolbar\\\\toolbar.py'> (djdt:djdt) ^__debug__>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <module 'debug_toolbar.toolbar' from 'G:\\PYTHON~1\\envs\\RENT_A~1\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'registration.backends.simple.urls' from 'G:\\PYTHON~1\\envs\\RENT_A~1\\lib\\site-packages\\registration\\backends\\simple\\urls.py'> (None:None) ^accounts/>], [<RegexURLPattern login ^accounts/login/$>], [<RegexURLPattern logout ^accounts/logout/$>], [<RegexURLPattern None ^accounts/profile/>], [<RegexURLPattern None ^$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <module 'debug_toolbar.toolbar' from 'G:\\PYTHON~1\\envs\\RENT_A~1\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'registration.backends.simple.urls' from 'G:\\PYTHON~1\\envs\\RENT_A~1\\lib\\site-packages\\registration\\backends\\simple\\urls.py'> (None:None) ^accounts/>], [<RegexURLPattern login ^accounts/login/$>], [<RegexURLPattern logout ^accounts/logout/$>], [<RegexURLPattern None ^accounts/profile/>], [<RegexURLPattern None ^$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'registration.backends.simple.urls' from 'G:\\\\PYTHON~1\\\\envs\\\\RENT_A~1\\\\lib\\\\site-packages\\\\registration\\\\backends\\\\simple\\\\urls.py'> (None:None) ^accounts/>"
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 11825
+"GET /accounts/login/ HTTP/1.1" 200 11064
+(0.296) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'ivanzub'; args=('ivanzub',)
+(0.109) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9' LIMIT 1; args=('n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9',)
+(0.137) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") VALUES ('n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9', 'NWJiNDhiZmVjY2RiMDkxNmE2ZGZmZWJhMWZkNDA0Njg1ZGE4YzAyYzp7fQ==', '2017-10-24T19:29:30.255331+00:00'::timestamptz); args=('n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9', 'NWJiNDhiZmVjY2RiMDkxNmE2ZGZmZWJhMWZkNDA0Njg1ZGE4YzAyYzp7fQ==', datetime.datetime(2017, 10, 24, 19, 29, 30, 255331, tzinfo=<UTC>))
+(0.083) UPDATE "auth_user" SET "last_login" = '2017-10-10T19:29:30.429341+00:00'::timestamptz WHERE "auth_user"."id" = 2; args=(datetime.datetime(2017, 10, 10, 19, 29, 30, 429341, tzinfo=<UTC>), 2)
+(0.001) UPDATE "django_session" SET "session_data" = 'NzIwNmU2NWE4MzhiNDUzNTI3ZTg0YTA4MmY5MjdhNjg4NDQ3Y2Y5MTp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5YjAwNjA3OGMzOTZkYjlmY2I2MmNjZmEwZDEyM2I0NTA2M2RjMmVmIn0=', "expire_date" = '2017-10-24T19:29:30.581350+00:00'::timestamptz WHERE "django_session"."session_key" = 'n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9'; args=('NzIwNmU2NWE4MzhiNDUzNTI3ZTg0YTA4MmY5MjdhNjg4NDQ3Y2Y5MTp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI5YjAwNjA3OGMzOTZkYjlmY2I2MmNjZmEwZDEyM2I0NTA2M2RjMmVmIn0=', datetime.datetime(2017, 10, 24, 19, 29, 30, 581350, tzinfo=<UTC>), 'n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9')
+"POST /accounts/login/ HTTP/1.1" 302 0
+(0.024) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9' AND "django_session"."expire_date" > '2017-10-10T19:29:30.593351+00:00'::timestamptz); args=('n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9', datetime.datetime(2017, 10, 10, 19, 29, 30, 593351, tzinfo=<UTC>))
+(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET /accounts/profile/ HTTP/1.1" 200 10695
+(0.440) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.057) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.143) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9' AND "django_session"."expire_date" > '2017-10-18T18:31:31.784108+00:00'::timestamptz); args=('n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9', datetime.datetime(2017, 10, 18, 18, 31, 31, 784108, tzinfo=<UTC>))
+(0.079) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+"GET / HTTP/1.1" 200 10696
+"GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/jquery_pre.js HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+"GET /static/debug_toolbar/js/jquery_post.js HTTP/1.1" 304 0
+"GET /static/debug_toolbar/img/ajax-loader.gif HTTP/1.1" 304 0
+"GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <module 'debug_toolbar.toolbar' from 'G:\\PYTHON~1\\envs\\RENT_A~1\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'registration.backends.simple.urls' from 'G:\\PYTHON~1\\envs\\RENT_A~1\\lib\\site-packages\\registration\\backends\\simple\\urls.py'> (None:None) ^accounts/>], [<RegexURLPattern login ^accounts/login/$>], [<RegexURLPattern logout ^accounts/logout/$>], [<RegexURLPattern None ^accounts/profile/>], [<RegexURLPattern None ^$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'debug_toolbar.toolbar' from 'G:\\\\PYTHON~1\\\\envs\\\\RENT_A~1\\\\lib\\\\site-packages\\\\debug_toolbar\\\\toolbar.py'> (djdt:djdt) ^__debug__>"
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <module 'debug_toolbar.toolbar' from 'G:\\PYTHON~1\\envs\\RENT_A~1\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'registration.backends.simple.urls' from 'G:\\PYTHON~1\\envs\\RENT_A~1\\lib\\site-packages\\registration\\backends\\simple\\urls.py'> (None:None) ^accounts/>], [<RegexURLPattern login ^accounts/login/$>], [<RegexURLPattern logout ^accounts/logout/$>], [<RegexURLPattern None ^accounts/profile/>], [<RegexURLPattern None ^$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\urls\resolvers.py", line 392, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <module 'debug_toolbar.toolbar' from 'G:\\PYTHON~1\\envs\\RENT_A~1\\lib\\site-packages\\debug_toolbar\\toolbar.py'> (djdt:djdt) ^__debug__>], [<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'registration.backends.simple.urls' from 'G:\\PYTHON~1\\envs\\RENT_A~1\\lib\\site-packages\\registration\\backends\\simple\\urls.py'> (None:None) ^accounts/>], [<RegexURLPattern login ^accounts/login/$>], [<RegexURLPattern logout ^accounts/logout/$>], [<RegexURLPattern None ^accounts/profile/>], [<RegexURLPattern None ^$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 882, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 890, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "G:\PYTHON~1\envs\RENT_A~1\lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'registration.backends.simple.urls' from 'G:\\\\PYTHON~1\\\\envs\\\\RENT_A~1\\\\lib\\\\site-packages\\\\registration\\\\backends\\\\simple\\\\urls.py'> (None:None) ^accounts/>"
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9' AND "django_session"."expire_date" > '2017-10-18T18:31:33.368199+00:00'::timestamptz); args=('n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9', datetime.datetime(2017, 10, 18, 18, 31, 33, 368199, tzinfo=<UTC>))
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 11824
+(0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9' AND "django_session"."expire_date" > '2017-10-18T18:31:49.577126+00:00'::timestamptz); args=('n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9', datetime.datetime(2017, 10, 18, 18, 31, 49, 577126, tzinfo=<UTC>))
+(0.002) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)
+(0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9'; args=('n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9',)
+(0.033) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9'); args=('n4qmwvdqnumqg7mbv5fx1nhjx0cd8ol9',)
+"GET /accounts/logout/ HTTP/1.1" 200 10776
+"GET /accounts/login/ HTTP/1.1" 200 11063
+"GET /accounts/register/ HTTP/1.1" 200 11662
+"GET /accounts/login/ HTTP/1.1" 200 11063
